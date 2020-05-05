@@ -1,0 +1,249 @@
+  html {
+    background-color: rgba(184, 216, 202, 0.65);
+    height: 100%;
+  }
+  
+  .title {
+    display:flex;
+    /* justify-content: center; */
+    text-align: center;
+    background-color: rgba(18, 112, 67, 0.72);
+    color: rgb(39, 59, 59);
+    padding: 70px;
+    font-size: 30px;
+    flex-direction: column;
+  }
+
+  /* Only relevant if I import fonts I guess */
+  /* .title h1{
+    font-family: Reenie Beanie;
+  } */
+
+  .navigation-bar {
+    display: flex;
+    overflow: hidden;
+    /* Why doesn't it display the color I specify? 
+    It's like it also gets the background color of .title */
+    background-color: rgba(17, 116, 68, 0.33);
+    /* Possibly make nav bar smaller */
+  }
+
+  .navigation-bar a {
+    float: left;
+    color: rgb(202, 199, 199);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navigation-bar a:hover {
+    background-color: rgb(128, 207, 131);
+    color: rgb(39, 59, 59);
+  }
+
+  .navigation-bar a.active {
+    background-color: rgb(128, 207, 131);
+    color: rgb(39, 59, 59);;
+  }
+
+  /* .menu-container {
+    transform: translateX(-100);
+  }
+
+  .menu.icon {
+    color: #000;
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 10px;
+    width: 17px;
+    height: 1px;
+    background-color: currentColor;
+  }
+  
+  .menu.icon:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 17px;
+    height: 1px;
+    background-color: currentColor;
+  }
+  
+  .menu.icon:after {
+    content: '';
+    position: absolute;
+    transform: translateX(-50);
+    top: 5px;
+    left: 0;
+    width: 17px;
+    height: 1px;
+    background-color: currentColor;
+  } */
+  
+  
+
+  /* Container to hold newest recipe and current theme */
+  .updatable-container {
+    display: flex;
+    }
+
+  .headers {
+    flex-grow: 3;
+    font-size: 25px;
+    padding: 0 20px;
+    color: rgb(39, 59, 59);
+  }
+    
+  .photos {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .text-description {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 20%;
+    margin: auto;
+    font-size: 17px;
+    color: rgb(39, 59, 59);
+  }
+
+  .newest-recipe-container {
+    width: 50%;
+    flex-direction: column;
+  }
+  
+  /* Container to hold newest recipe with subcontainers combining 
+  column and row style */
+  .newest-recipe-subcontainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .newest-recipe-header {
+    text-align: left;
+  }
+  
+  .newest-recipe-photo {
+    flex-grow: 2;
+    order: 1;
+    margin: 2px;
+  }
+  
+  .newest-recipe-description {
+    background-color: rgba(17, 116, 68, 0.33);
+    justify-content: center;
+    order: 2;
+    flex-grow: 1;
+    margin: 2px;
+    width: 40%;
+    display: flex;
+    height: 300px;
+  }
+  
+  /* Container to hold current theme with subcontainers combining 
+  column and row style */
+  .current-theme-container {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    height: 300px;
+  }
+  
+  .current-theme-subcontainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .current-theme-header {
+    text-align: right;
+  }
+  
+  .current-theme-description {
+    background-color: rgba(17, 116, 68, 0.33);
+    justify-content: center;
+    order: 1;
+    flex-grow: 1;
+    margin: 2px;
+    width: 40%;
+    display: flex;
+    height: 300px;
+  }
+  
+  .current-theme-photo {
+    order: 2;
+    flex-grow: 2;
+    margin: 2px;
+  }
+
+  footer {
+    text-align: center;
+    color: rgb(39, 59, 59);
+  }
+
+  /* Recipes */
+
+  .categories {
+    display: grid;
+    grid-column-gap: 50px;
+  }
+
+  .recipeCategory {
+    text-align: center;
+  }
+
+  .categoryPhoto {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .breakfast {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  @media (max-width: 600px) {
+
+    .title h1{
+      font-size: 30px;
+    }
+
+    .updatable-container{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .newest-recipe-container, .current-theme-container {
+      min-width: 100%;
+    }
+    
+    .newest-recipe-container div, .current-theme-container div {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .newest-recipe-header, .current-theme-header {
+      display: flex;
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    .current-theme-description, .newest-recipe-description {
+      order: 2;
+      height: 130px;
+    }
+    
+    .current-theme-photo {
+      order: 1;
+    }
+
+  }
