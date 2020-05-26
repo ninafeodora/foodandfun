@@ -10,13 +10,23 @@
 
   <body>
     <div class="title">
-      <!-- <div class="menu-container">
-        <div class="menu icon"></div>
-      </div> -->
       <h1>Food and fun</h1>
       <div class="navigation-bar">
         <a class="active" href="index.html">Home</a>
-        <a href="recipeCategories.html">Recipes</a>
+        <div class="dropdown-menu">
+          <button class="dropdown-button">
+            <a href="recipeCategories.html">Recipes</a>
+            <!-- <i class="fa fa-caret-down"></i> -->
+          </button>
+          <div class="dropdown-content">
+            <a href="breakfast.html">Breakfast</a>
+            <a href="lunch.html">Lunch</a>
+            <a href="dinner.html">Dinner</a>
+            <a href="dessertAndPastries.html">Dessert & Pastries</a>
+            <a href="drinks.html">Drinks</a>
+            <a href="condiments.html">Condiments</a>
+          </div>
+        </div>
       </div> 
     </div>
     <div class="updatable-container">
@@ -45,7 +55,7 @@
           <h3 class="headers">Current theme</h3>
         </div>
         <div class="current-theme-subcontainer">
-         <!-- This should be updatable -->
+        <!-- This should be updatable -->
           <div class="current-theme-description">
             <h4 class="text-description">Winter warming stews</h4>
           </div>
@@ -59,12 +69,9 @@
         </div>
       </div>
     </div>
+    <footer>
+      All photos and recipes are &copy; 
+      <a href="https://greenkitchenstories.com/">GreenkitchenStories</a>
+    </footer>
   </body>
-  <br />
-  <br />
-  <footer>
-    All photos and recipes are &copy; 
-    <a href="https://greenkitchenstories.com/">GreenkitchenStories
-    </a>
-  </footer>
 </html>
