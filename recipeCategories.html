@@ -8,6 +8,7 @@
     </head>
 
     <body>
+        <div class="container">
         <div class="title">
             <!-- <div class="menu-container">
                 <div class="menu icon"></div>
@@ -15,64 +16,91 @@
             <h1>Food and fun</h1>
             <div class="navigation-bar">
                 <a href="index.html">Home</a>
+                <div class="dropdown-menu">
+                  <button class="dropdown-button">
+                    <a class="active" href="recipeCategories.html">Recipes</a>
+                    <!-- <i class="fa fa-caret-down"></i> -->
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="breakfast.html">Breakfast</a>
+                    <a href="lunch.html">Lunch</a>
+                    <a href="dinner.html">Dinner</a>
+                    <a href="dessertAndPastries.html">Dessert & Pastries</a>
+                    <a href="drinks.html">Drinks</a>
+                    <a href="condiments.html">Condiments</a>
+                  </div>
+                </div>
+              </div> 
+            <!-- <div class="navigation-bar">
+                <a href="index.html">Home</a>
                 <a class="active" href="recipeCategories.html">Recipes</a>
-            </div> 
+            </div>  -->
         </div>
         <div class="categories">
             <div class="recipeCategory breakfast">
+                <h3>
+                    <a href="breakfast.html">Breakfast</a>
+                </h3>
                 <img
                 class="categoryPhoto"
                 src="images/SwedishBreakfast_01.jpg"
                 alt="Swedish breakfast"
                 />
-                <h3>Breakfast</h3>
             </div>
-            <div class="recipeCategory">
+            <div class="recipeCategory lunch">
+                <h3>
+                    <a href="lunch.html">Lunch</a>
+                </h3>
                 <img
                 class="categoryPhoto"
-                src="images/SwedishBreakfast_01.jpg"
-                alt="Swedish breakfast"
+                src="images/Cauliflower_couscous_salad.jpg"
+                alt="Cauliflower couscous salad"
                 />
-                <h3>Lunch</h3>
             </div>
-            <div class="recipeCategory">
+            <div class="recipeCategory dinner">
+                <h3>
+                    <a href="dinner.html">Dinner</a>
+                </h3>
                 <img
                 class="categoryPhoto"
-                src="images/SwedishBreakfast_01.jpg"
-                alt="Swedish breakfast"
+                src="images/Grain_platter.jpg"
+                alt="Grain platter"
                 />
-                <h3>Dinner</h3>
             </div>
-            <div class="recipeCategory">
+            <div class="recipeCategory dessertAndPastries">
+                <h3>
+                    <a href="dessertAndPastries.html">Dessert & Pastries</a>
+                </h3>
                 <img
                 class="categoryPhoto"
-                src="images/SwedishBreakfast_01.jpg"
-                alt="Swedish breakfast"
+                src="images/RyeAndTahiniCookies.jpg"
+                alt="Rye And Tahini Cookies"
                 />
-                <h3>Dessert & Pastries</h3>
             </div>
-            <div class="recipeCategory">
+            <div class="recipeCategory drinks">
+                <h3>
+                    <a href="drinks.html">Drinks</a>
+                </h3>
                 <img
                 class="categoryPhoto"
-                src="images/SwedishBreakfast_01.jpg"
-                alt="Swedish breakfast"
+                src="images/Chamomille_turmeric_tea.jpg"
+                alt="Chamomille turmeric tea"
                 />
-                <h3>Drinks</h3>
             </div>
-            <div class="recipeCategory">
+            <div class="recipeCategory condiments">
+                <h3>
+                    <a href="condiments.html">Condiments</a>
+                </h3>
                 <img
                 class="categoryPhoto"
-                src="images/SwedishBreakfast_01.jpg"
-                alt="Swedish breakfast"
+                src="images/Golden_krauts.jpg"
+                alt="Golden krauts"
                 />
-                <h3>Condiments</h3>
             </div>
         </div>
-    </body>
-    <br />
-    <br />
-    <footer>
-        All photos and recipes are &copy; 
-        <a href="https://greenkitchenstories.com/">GreenkitchenStories
-        </a>
-      </footer>
+        <footer>
+            All photos and recipes are &copy; 
+            <a href="https://greenkitchenstories.com/">GreenkitchenStories</a>
+          </footer>
+    </body>    
+</html>

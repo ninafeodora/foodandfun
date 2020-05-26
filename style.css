@@ -1,92 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dosis:wght@200;400&display=swap');
+  
   html {
     background-color: rgba(184, 216, 202, 0.65);
     height: 100%;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
   }
-  
+
+  body {  
+    margin: 20px;
+    margin-top: 0px;  
+    padding: 0px;
+    min-height: 100vh;
+  }
+
   .title {
     display:flex;
-    /* justify-content: center; */
     text-align: center;
     background-color: rgba(18, 112, 67, 0.72);
     color: rgb(39, 59, 59);
-    padding: 70px;
-    font-size: 30px;
+    padding: 0px;
     flex-direction: column;
+    border-radius: 3px;
   }
 
-  /* Only relevant if I import fonts I guess */
-  /* .title h1{
-    font-family: Reenie Beanie;
-  } */
+  .title h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 85px;
+  }
 
+  /* navigation-bar container */
   .navigation-bar {
     display: flex;
     overflow: hidden;
-    /* Why doesn't it display the color I specify? 
-    It's like it also gets the background color of .title */
-    background-color: rgba(17, 116, 68, 0.33);
-    /* Possibly make nav bar smaller */
+    background-color: rgb(147, 192, 171);
+    width: 250px;
+    justify-items: center;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
   }
 
+  /* Links inside the navigation-bar */
   .navigation-bar a {
-    float: left;
-    color: rgb(202, 199, 199);
+    color: rgb(39, 59, 59);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    /* margin: auto; */
+    /* For some annpoying reason, the division between two links is not in the middle
+    When iPad-size, the division is to the right, when big to the left */
+    width: 125px;
+    font-size: 23px;
   }
 
-  .navigation-bar a:hover {
-    background-color: rgb(128, 207, 131);
-    color: rgb(39, 59, 59);
-  }
-
+  /* The page I'm currently on */
   .navigation-bar a.active {
-    background-color: rgb(128, 207, 131);
-    color: rgb(39, 59, 59);;
+    font-weight: bold;
   }
 
-  /* .menu-container {
-    transform: translateX(-100);
+  .dropdown-button {
+    border: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
   }
 
-  .menu.icon {
-    color: #000;
-    position: absolute;
-    margin-left: 2px;
-    margin-top: 10px;
-    width: 17px;
-    height: 1px;
-    background-color: currentColor;
+  .navigation-bar a:hover, .dropdown-menu:hover {
+    background-color: rgb(124, 175, 151);
   }
-  
-  .menu.icon:before {
-    content: '';
+
+  .dropdown-content {
+    display: none; /* Dropdown content hidden by default */
     position: absolute;
-    top: -5px;
-    left: 0;
-    width: 17px;
-    height: 1px;
-    background-color: currentColor;
+    background-color: rgb(124, 175, 151);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 3px;
   }
-  
-  .menu.icon:after {
-    content: '';
-    position: absolute;
-    transform: translateX(-50);
-    top: 5px;
-    left: 0;
-    width: 17px;
-    height: 1px;
-    background-color: currentColor;
-  } */
-  
-  
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: rgb(147, 192, 171);
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown-menu:hover:hover .dropdown-content {
+    display: block;
+  } 
 
   /* Container to hold newest recipe and current theme */
   .updatable-container {
     display: flex;
+    flex: 1;
     }
 
   .headers {
@@ -100,16 +115,17 @@
     width: 100%;
     height: 300px;
     object-fit: cover;
+    border-radius: 3px;
   }
   
   .text-description {
     text-align: center;
-    font-size: 20px;
     line-height: 30px;
     padding: 20%;
     margin: auto;
-    font-size: 17px;
+    font-size: 25px;
     color: rgb(39, 59, 59);
+    font-weight: 200;
   }
 
   .newest-recipe-container {
@@ -143,6 +159,7 @@
     width: 40%;
     display: flex;
     height: 300px;
+    border-radius: 3px;
   }
   
   /* Container to hold current theme with subcontainers combining 
@@ -172,6 +189,7 @@
     width: 40%;
     display: flex;
     height: 300px;
+    border-radius: 3px;
   }
   
   .current-theme-photo {
@@ -183,17 +201,38 @@
   footer {
     text-align: center;
     color: rgb(39, 59, 59);
+    /* position: fixed; */
+    left: 0;
+    /* bottom: 0; */
+    height: 25px;  
+    width: 100%; 
+    overflow: hidden;
   }
 
-  /* Recipes */
+  /* Recipe Categories */
 
   .categories {
     display: grid;
-    grid-column-gap: 50px;
+    grid-column-gap: 30px;
+    margin-top: 30px;
   }
 
   .recipeCategory {
     text-align: center;
+  }
+
+  .recipeCategory a {
+    color: rgb(39, 59, 59);
+    font-size: 23px;
+  }
+
+  .recipeCategory a:hover {
+    color: rgba(18, 112, 67, 0.72);
+  }
+
+  /* Not sure if this is helpful or confusing? */
+  .recipeCategory a:visited {
+    color: rgba(39, 59, 59, 0.521);
   }
 
   .categoryPhoto {
@@ -208,18 +247,337 @@
     grid-row-start: 1;
     grid-row-end: 2;
   }
-  
-  @media (max-width: 600px) {
 
+  .lunch {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .dinner {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .dessertAndPastries {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .drinks {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .condiments {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  /* Individual recipe category s.a. Breakfast */
+
+  .category-header {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+  }
+
+  .recipe-images-grid {
+    display: grid;
+    grid-gap: 30px;
+  }
+
+  .image-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .image-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .image-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .image-4 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .image-5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .image-6 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
+  .image-7 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .image-8 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  /* Individual recipe */
+
+  .recipe-page {
+    margin: 60px;
+    padding-bottom: 60px;
+  }
+
+  .recipe-page h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 38px;
+  }
+
+  .recipePhoto {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .recipe-page i {
+    font-size: 19px;
+  }
+
+  .recipe-page h4 {
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .recipe-page p {
+    margin-right: 300px;
+    font-size: 19px;
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: 18px;
+  }
+
+  @media (max-width: 900px) {
+
+    body {  
+      margin: 10px;
+    }
+    
     .title h1{
+      font-size: 60px;
+    }
+
+    .navigation-bar a{
+      font-size: 17px;
+    }
+
+    .text-description{
+      font-size: 20px;
+    }
+
+    /* Recipe Categories */
+
+    .recipeCategory h3 {
+      font-size: 20px;
+    }
+
+    .recipeCategory a {
+      font-size: 20px;
+    }
+
+    .breakfast {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  
+    .lunch {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  
+    .dinner {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  
+    .dessertAndPastries {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  
+    .drinks {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+  
+    .condiments {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+
+    /* Individual recipe category s.a. Breakfast */
+
+    .category-header {
+      text-align: center;
+      font-family: 'Amatic SC', cursive;
       font-size: 30px;
     }
 
+    .recipe-images-grid {
+      display: grid;
+      grid-gap: 30px;
+      /* Attempt at making 2 image columns in Dessert category same width - didn't work! */
+      /* grid-template-columns: auto auto; */
+    }
+
+    .image-1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  
+    .image-2 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  
+    .image-3 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  
+    .image-4 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  
+    .image-5 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+  
+    .image-6 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+
+    .image-7 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+  
+    .image-8 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+
+    /* Individual recipe */
+
+    .recipe-page {
+      margin: 20px;
+    }
+
+    .recipe-page h2 {
+      font-size: 30px;
+    }
+
+    .recipePhoto {
+      height: 400px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .recipe-page i {
+      font-size: 18px;
+    }
+  
+    .recipe-page h4 {
+      font-size: 18px;
+    }
+  
+    .recipe-page p {
+      margin-right: 0px;
+      font-size: 18px;
+    }
+  
+    ul {
+      font-size: 18px;
+    }
+
+  }
+
+  @media (max-width: 700px) {
+
     .updatable-container{
-      position: relative;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+    }
+
+    .text-description{
+      font-size: 22px;
     }
 
     .newest-recipe-container, .current-theme-container {
@@ -244,6 +602,54 @@
     
     .current-theme-photo {
       order: 1;
+    }
+
+    .index footer div {
+      position: fixed;
+      bottom: 0;
+    }
+
+    .categories {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .recipe-images-grid {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Individual recipe */
+
+    .recipe-page {
+      margin: 10px;
+    }
+
+    .recipe-page h2 {
+      font-size: 25px;
+    }
+
+    .recipePhoto {
+      height: 300px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .recipe-page i {
+      font-size: 17px;
+    }
+  
+    .recipe-page h4 {
+      font-size: 17px;
+    }
+  
+    .recipe-page p {
+      /* margin-right: 0px; */
+      font-size: 17px;
+    }
+  
+    ul {
+      font-size: 17px;
     }
 
   }
