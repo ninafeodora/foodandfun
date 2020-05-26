@@ -50,9 +50,6 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    /* margin: auto; */
-    /* For some annpoying reason, the division between two links is not in the middle
-    When iPad-size, the division is to the right, when big to the left */
     width: 125px;
     font-size: 23px;
   }
@@ -66,8 +63,8 @@
     border: none;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit;
+    margin: 0;
   }
 
   .navigation-bar a:hover, .dropdown-menu:hover {
@@ -126,6 +123,11 @@
     font-size: 25px;
     color: rgb(39, 59, 59);
     font-weight: 200;
+  }
+
+  .text-description a {
+    color: rgb(39, 59, 59);
+    text-decoration: none;
   }
 
   .newest-recipe-container {
@@ -201,9 +203,7 @@
   footer {
     text-align: center;
     color: rgb(39, 59, 59);
-    /* position: fixed; */
     left: 0;
-    /* bottom: 0; */
     height: 25px;  
     width: 100%; 
     overflow: hidden;
@@ -230,7 +230,6 @@
     color: rgba(18, 112, 67, 0.72);
   }
 
-  /* Not sure if this is helpful or confusing? */
   .recipeCategory a:visited {
     color: rgba(39, 59, 59, 0.521);
   }
@@ -473,8 +472,6 @@
     .recipe-images-grid {
       display: grid;
       grid-gap: 30px;
-      /* Attempt at making 2 image columns in Dessert category same width - didn't work! */
-      /* grid-template-columns: auto auto; */
     }
 
     .image-1 {
@@ -644,7 +641,6 @@
     }
   
     .recipe-page p {
-      /* margin-right: 0px; */
       font-size: 17px;
     }
   
